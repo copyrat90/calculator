@@ -116,6 +116,8 @@ namespace CalculatorApp::ViewModel::Common
         Ceil = (int)CM::Command::CommandCeil,
         Rand = (int)CM::Command::CommandRand,
         Euler = (int)CM::Command::CommandEuler,
+        Gcd = (int)CM::Command::CommandGcd,
+        Lcm = (int)CM::Command::CommandLcm,
         RshL = (int)CM::Command::CommandRSHFL,
         RolC = (int)CM::Command::CommandROLC,
         RorC = (int)CM::Command::CommandRORC,

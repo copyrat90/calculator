@@ -176,6 +176,9 @@ namespace CalculationManager
         CommandRand = 600,
         CommandEuler = 601,
 
+        CommandGcd = 602,
+        CommandLcm = 603,
+
         CommandAnd = 86,
         CommandOR = 87,
         CommandNot = 101,

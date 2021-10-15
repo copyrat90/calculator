@@ -808,6 +808,7 @@
                                 <ColumnDefinition Width="1*"/>
                                 <ColumnDefinition Width="1*"/>
                                 <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
                             <controls:CalculatorButton x:Name="AbsFlyoutButton"
                                                        x:Uid="absButton"
@@ -839,6 +840,18 @@
                                                        Click="FlyoutButton_Clicked"
                                                        Command="{x:Bind Model.ButtonPressed}"
                                                        Content="&#xF886;"
+                                                       IsEnabled="{x:Bind FuncButton.IsEnabled, Mode=OneWay}"/>
+
+                            <controls:CalculatorButton x:Name="GcdButton"
+                                                       x:Uid="gcdButton"
+                                                       Grid.Column="3"
+                                                       Style="{StaticResource OperatorButtonStyle}"
+                                                       FontSize="{StaticResource CalcOperatorCaptionSizeSmall}"
+                                                       AutomationProperties.AutomationId="gcdButton"
+                                                       ButtonId="Gcd"
+                                                       Click="FlyoutButton_Clicked"
+                                                       Command="{x:Bind Model.ButtonPressed}"
+                                                       Content="gcd"
                                                        IsEnabled="{x:Bind FuncButton.IsEnabled, Mode=OneWay}"/>
 
                             <controls:CalculatorButton x:Name="RandButton"
@@ -876,6 +889,19 @@
                                                        Command="{x:Bind Model.ButtonPressed}"
                                                        Content="&#xF891;"
                                                        IsEnabled="{x:Bind FuncButton.IsEnabled, Mode=OneWay}"/>
+
+                            <controls:CalculatorButton x:Name="LcmButton"
+                                                       x:Uid="lcmButton"
+                                                       Grid.Row="1"
+                                                       Grid.Column="3"
+                                                       Style="{StaticResource OperatorButtonStyle}"
+                                                       FontSize="{StaticResource CalcOperatorCaptionSizeSmall}"
+                                                       AutomationProperties.AutomationId="lcmButton"
+                                                       ButtonId="Lcm"
+                                                       Click="FlyoutButton_Clicked"
+                                                       Command="{x:Bind Model.ButtonPressed}"
+                                                       Content="lcm"
+                                                       IsEnabled="{x:Bind FuncButton.IsEnabled, Mode=OneWay}"/>
                         </Grid>
                     </Flyout>
                 </controls:OperatorPanelButton.FlyoutMenu>
@@ -888,13 +914,12 @@
                       Style="{StaticResource CaptionToggleEmphasizedButtonStyle}"
                       FontFamily="{StaticResource CalculatorFontFamily}"
                       FontSize="{StaticResource CalcOperatorCaptionSize}"
+                      AllowFocusOnInteraction="False"
                       AutomationProperties.AutomationId="shiftButton"
                       Checked="ShiftButton_Check"
                       Content="&#xF897;"
                       IsEnabledChanged="ShiftButton_IsEnabledChanged"
-                      Unchecked="ShiftButton_Check"
-                      AllowFocusOnInteraction="False"
-                      />
+                      Unchecked="ShiftButton_Check"/>
 
         <controls:CalculatorButton x:Name="PiButton"
                                    x:Uid="piButton"
