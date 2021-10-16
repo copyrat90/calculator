@@ -171,7 +171,10 @@
 #define IDC_NOR 502      // Nor
 
 #define IDC_RSHFL 505 // Right Shift Logical
-#define IDC_BINARYEXTENDEDLAST IDC_RSHFL
+
+#define IDC_GCD 506 // Gcd
+#define IDC_LCM 507 // Lcm
+#define IDC_BINARYEXTENDEDLAST IDC_LCM
 
 #define IDC_RAND 600  // Random
 #define IDC_EULER 601 // e Constant

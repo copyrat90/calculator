@@ -171,6 +171,8 @@ inline constexpr auto SIDS_ERR_UNEX_END = L"117";
 inline constexpr auto SIDS_ERR_SG_INV_ERROR = L"118";
 inline constexpr auto SIDS_ERR_INPUT_OVERFLOW = L"119";
 inline constexpr auto SIDS_ERR_OUTPUT_OVERFLOW = L"120";
+inline constexpr auto SIDS_GCD = L"426";
+inline constexpr auto SIDS_LCM = L"427";
 inline constexpr auto SIDS_SECD = L"SecDeg";
 inline constexpr auto SIDS_SECR = L"SecRad";
 inline constexpr auto SIDS_SECG = L"SecGrad";
@@ -206,7 +208,7 @@ inline constexpr auto SIDS_CUBEROOT = L"CubeRoot";
 inline constexpr auto SIDS_PROGRAMMER_MOD = L"ProgrammerMod";
 
 // Include the resource key ID from above into this vector to load it into memory for the engine to use
-inline constexpr std::array<std::wstring_view, 152> g_sids = {
+inline constexpr std::array<std::wstring_view, 154> g_sids = {
     SIDS_PLUS_MINUS,
     SIDS_C,
     SIDS_CE,
@@ -355,6 +357,8 @@ inline constexpr std::array<std::wstring_view, 152> g_sids = {
     SIDS_ABS,
     SIDS_FLOOR,
     SIDS_CEIL,
+    SIDS_GCD,
+    SIDS_LCM,
     SIDS_NAND,
     SIDS_NOR,
     SIDS_CUBEROOT,

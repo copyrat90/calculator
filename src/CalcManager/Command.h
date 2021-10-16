@@ -173,11 +173,12 @@ namespace CalculationManager
         CommandNor = 502,
 
         CommandRSHFL = 505,
+
+        CommandGcd = 506,
+        CommandLcm = 507,
+
         CommandRand = 600,
         CommandEuler = 601,
-
-        CommandGcd = 602,
-        CommandLcm = 603,
 
         CommandAnd = 86,
         CommandOR = 87,

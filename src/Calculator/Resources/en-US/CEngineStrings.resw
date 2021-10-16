@@ -417,6 +417,14 @@
     <value>Cannot divide by zero</value>
     <comment>Error string shown when a divide by zero condition happens during the calculation</comment>
   </data>
+  <data name="426" xml:space="preserve">
+    <value>gcd</value>
+    <comment>{Locked}The string that represents the function</comment>
+  </data>
+  <data name="427" xml:space="preserve">
+    <value>lcm</value>
+    <comment>{Locked}The string that represents the function</comment>
+  </data>
   <data name="SecDeg" xml:space="preserve">
     <value>sec₀</value>
     <comment>{Locked}The string that represents the function</comment>
