@@ -35,4 +35,7 @@ namespace CalcEngine::RationalMath
     Rational ASinh(Rational const& rat);
     Rational ACosh(Rational const& rat);
     Rational ATanh(Rational const& rat);
+
+    Rational Gcd(Rational const& a, Rational const& b);
+    Rational Lcm(Rational const& a, Rational const& b);
 }

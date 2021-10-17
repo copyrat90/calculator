@@ -6,6 +6,8 @@
 using namespace std;
 using namespace CalcEngine;
 
+static constexpr int GCD_LOOP_LIMIT = 1000;
+
 Rational RationalMath::Frac(Rational const& rat)
 {
     PRAT prat = rat.ToPRAT();
@@ -415,4 +417,43 @@ Rational RationalMath::Mod(Rational const& a, Rational const& b)
     auto res = Rational{ prat };
     destroyrat(prat);
     return res;
+}
+
+// Very naive implementation, freezes if `a` and `b` are not commensurable.
+Rational RationalMath::Gcd(Rational const& a, Rational const& b)
+{
+    if (a < 0 || b < 0)
+        throw(CALC_E_DOMAIN);
+
+    if (b > a)
+        return Gcd(b, a);
+
+    Rational ta = a;
+    Rational tb = b;
+
+    bool infiniteLoop = true;
+    for (int i = 0; i < GCD_LOOP_LIMIT; ++i)
+    {
+        // Euclidean algorithm
+        Rational tmp = tb;
+        tb = Mod(ta, tb);
+        ta = tmp;
+
+        if (tb <= 0)
+        {
+            infiniteLoop = false;
+            break;
+        }
+    }
+    if (infiniteLoop)
+        throw(CALC_E_DOMAIN);
+
+    return ta;
+}
+
+// Very naive implementation, freezes if `a` and `b` are not commensurable.
+Rational RationalMath::Lcm(Rational const& a, Rational const& b)
+{
+    Rational gcd = Gcd(a, b);
+    return a / gcd * b;
 }

@@ -161,6 +161,14 @@ CalcEngine::Rational CCalcEngine::DoOperation(int operation, CalcEngine::Rationa
         case IDC_LOGBASEY:
             result = (Log(rhs) / Log(result));
             break;
+
+        case IDC_GCD:
+            result = Gcd(rhs, result);
+            break;
+
+        case IDC_LCM:
+            result = Lcm(rhs, result);
+            break;
         }
     }
     catch (uint32_t dwErrCode)
